@@ -22,11 +22,13 @@
         }
 
         :root {
-            --color-primary: #6b4423;
-            --color-secondary: #b8860b;
-            --color-dark: #2b1810;
+            /* Colores ajustados según audio y tarjeta */
+            --color-primary: #a682ac;    /* Lila de la tarjeta y audio */
+            --color-secondary: #8bbbd9;  /* Celeste mencionado en audio */
+            --color-dark: #3a3a3a;       /* Gris oscuro del cabezal de la tarjeta */
             --color-white: #ffffff;
-            --color-light: #f5f1e8;
+            --color-light: #f4f4f6;      /* Gris clarito mencionado en audio */
+            --color-accent: #c15c9f;     /* Detalle magenta/lila de la tarjeta */
         }
 
         body {
@@ -54,7 +56,7 @@
 
         header.scrolled {
             background: var(--color-dark);
-            box-shadow: 0 2px 10px rgba(43, 24, 16, 0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav {
@@ -75,7 +77,7 @@
 
         .logo-icon {
             font-size: 25px;
-            color: var(--color-secondary);
+            color: var(--color-accent);
         }
 
         .logo-text {
@@ -121,16 +123,16 @@
         }
 
         .cta-nav {
-            background: var(--color-secondary);
-            color: var(--color-dark) !important;
+            background: var(--color-accent);
+            color: var(--color-white) !important;
             padding: 12px 28px;
-            border: 2px solid var(--color-secondary);
+            border: 2px solid var(--color-accent);
             transition: all 0.3s;
         }
 
         .cta-nav:hover {
             background: transparent;
-            color: var(--color-secondary) !important;
+            color: var(--color-accent) !important;
             transform: translateY(-2px);
         }
 
@@ -152,40 +154,22 @@
             position: absolute;
         }
 
-        .menu-toggle span:nth-child(1) {
-            top: 0;
-        }
+        .menu-toggle span:nth-child(1) { top: 0; }
+        .menu-toggle span:nth-child(2) { top: 8px; }
+        .menu-toggle span:nth-child(3) { top: 16px; }
 
-        .menu-toggle span:nth-child(2) {
-            top: 8px;
-        }
-
-        .menu-toggle span:nth-child(3) {
-            top: 16px;
-        }
-
-        .menu-toggle.active span:nth-child(1) {
-            top: 8px;
-            transform: rotate(45deg);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            top: 8px;
-            transform: rotate(-45deg);
-        }
+        .menu-toggle.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
 
         .menu-toggle.active span {
             background: var(--color-white) !important;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - Restaurado formato original */
         .hero {
-            padding: 56px 40px 160px;
-            background: var(--color-dark);
+            padding: 56px 40px 200px;
+            background: #191919;
             position: relative;
             overflow: hidden;
             min-height: 117vh;
@@ -201,9 +185,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover no-repeat;
-            filter: grayscale(100%) sepia(30%) hue-rotate(10deg);
-            opacity: 0.15;
+            background: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&q=80') center/cover no-repeat;
+            filter: grayscale(100%) sepia(30%) hue-rotate(280deg); /* Ajustado para tinte lila */
+            opacity: 0.2;
             z-index: 0;
         }
 
@@ -223,7 +207,7 @@
         }
 
         .hero h1 span {
-            color: var(--color-secondary);
+            color: var(--color-accent);
         }
 
         .hero .subtitle {
@@ -264,14 +248,15 @@
         }
 
         .btn-primary {
-            background: var(--color-secondary);
-            color: var(--color-dark);
+            background: var(--color-accent);
+            color: var(--color-white);
         }
 
         .btn-primary:hover {
             background: var(--color-white);
+            color: var(--color-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(184, 134, 11, 0.3);
+            box-shadow: 0 10px 30px rgba(193, 92, 159, 0.3);
         }
 
         .btn-secondary {
@@ -305,7 +290,7 @@
 
         .section-label {
             font-size: 14px;
-            color: var(--color-secondary);
+            color: var(--color-accent);
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -350,7 +335,7 @@
 
         .atencion-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(107, 68, 35, 0.15);
+            box-shadow: 0 20px 40px rgba(166, 130, 172, 0.15);
         }
 
         .atencion-icon {
@@ -411,7 +396,7 @@
         }
 
         .area-card:hover {
-            box-shadow: 0 15px 40px rgba(107, 68, 35, 0.15);
+            box-shadow: 0 15px 40px rgba(166, 130, 172, 0.15);
             transform: translateX(5px);
         }
 
@@ -450,7 +435,7 @@
 
         .area-services li {
             padding: 10px 0;
-            border-bottom: 1px solid rgba(107, 68, 35, 0.2);
+            border-bottom: 1px solid rgba(166, 130, 172, 0.2);
             color: var(--color-dark);
             display: flex;
             align-items: center;
@@ -467,9 +452,9 @@
             font-size: 10px;
         }
 
-        /* TEAM SECTION */
+        /* TEAM SECTION - Restaurado formato original */
         .team {
-            background: #1a0f08;
+            background: #191919;
             position: relative;
             overflow: hidden;
         }
@@ -483,7 +468,7 @@
             height: 100%;
             background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1920&q=80') center/cover no-repeat;
             filter: grayscale(100%) sepia(20%);
-            opacity: 0.08;
+            opacity: 0.2;
             z-index: 0;
         }
 
@@ -532,7 +517,7 @@
             background: rgba(255,255,255,0.05);
             padding: 40px 30px;
             text-align: center;
-            border: 2px solid rgba(184, 134, 11, 0.3);
+            border: 2px solid rgba(139, 187, 217, 0.3);
             transition: all 0.3s ease;
         }
 
@@ -616,7 +601,7 @@
 
         .beneficio-card:hover .beneficio-icon {
             transform: scale(1.1);
-            box-shadow: 0 10px 30px rgba(107, 68, 35, 0.3);
+            box-shadow: 0 10px 30px rgba(166, 130, 172, 0.3);
         }
 
         .beneficio-card h3 {
@@ -630,9 +615,9 @@
             line-height: 1.7;
         }
 
-        /* CTA SECTION */
+        /* CTA SECTION - Restaurado formato original en capas */
         .cta-section {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            background: linear-gradient(135deg, #591a44 0%, #191919 100%);
             position: relative;
             overflow: hidden;
             padding: 100px 40px;
@@ -659,7 +644,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(107, 68, 35, 0.6) 0%, rgba(43, 24, 16, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(103, 77, 108, 0.6) 0%, rgba(35, 35, 35, 0.6) 100%);
             z-index: 1;
         }
 
@@ -752,7 +737,7 @@
         .contacto-form {
             background: var(--color-white);
             padding: 50px 45px;
-            box-shadow: 0 10px 40px rgba(107, 68, 35, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .contacto-form h3 {
@@ -788,7 +773,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px rgba(107, 68, 35, 0.1);
+            box-shadow: 0 0 0 3px rgba(166, 130, 172, 0.1);
         }
 
         .form-group textarea {
@@ -799,7 +784,7 @@
         .form-submit {
             width: 100%;
             padding: 18px;
-            background: var(--color-primary);
+            background: var(--color-accent);
             color: var(--color-white);
             border: none;
             font-weight: 700;
@@ -813,7 +798,7 @@
         .form-submit:hover {
             background: var(--color-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(107, 68, 35, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         /* FOOTER */
@@ -840,7 +825,7 @@
 
         .footer-logo-icon {
             font-size: 30px;
-            color: var(--color-secondary);
+            color: var(--color-accent);
         }
 
         .footer-logo-text {
@@ -878,7 +863,7 @@
         .social-link {
             width: 40px;
             height: 40px;
-            background: rgba(184, 134, 11, 0.15);
+            background: rgba(166, 130, 172, 0.15);
             color: var(--color-secondary);
             border-radius: 50%;
             display: inline-flex;
@@ -1015,13 +1000,13 @@
             }
 
             .nav-links .cta-nav {
-                background: var(--color-secondary) !important;
-                color: var(--color-dark) !important;
-                border-color: var(--color-secondary) !important;
+                background: var(--color-accent) !important;
+                color: var(--color-white) !important;
+                border-color: var(--color-accent) !important;
             }
 
             .hero {
-                padding: 42px 20px 90px;
+                padding: 42px 20px 120px;
             }
 
             .hero h1 {
@@ -1081,7 +1066,8 @@
             }
 
             .area-services li {
-                text-align: left;
+                text-align: center;
+                justify-content: center;
             }
 
             .atencion-list {
@@ -1243,10 +1229,10 @@
                 <p class="area-description">Asesoramiento integral en trámites jubilatorios y previsionales para asegurar tus beneficios.</p>
                 <ul class="area-services">
                     <li><i class="fas fa-check"></i> Planificación de jubilación ANSES</li>
-                    <li><i class="fas fa-check"></i> Jubilación docentes IPS</li>
+                    <li><i class="fas fa-check"></i> Jubilación docentes IPS y servicios generales</li>
                     <li><i class="fas fa-check"></i> Multi cajas</li>
-                    <li><i class="fas fa-check"></i> Reajustes de haberes</li>
                     <li><i class="fas fa-check"></i> Inicios de trámite</li>
+                    <li><i class="fas fa-check"></i> Todo tipo de tramites referidos a la carrera docente</li>
                 </ul>
             </div>
 
@@ -1260,10 +1246,11 @@
                 <p class="area-description">Acompañamiento legal en momentos importantes, protegiendo tus derechos familiares con sensibilidad.</p>
                 <ul class="area-services">
                     <li><i class="fas fa-check"></i> Divorcios</li>
-                    <li><i class="fas fa-check"></i> Régimen de visitas</li>
+                    <li><i class="fas fa-check"></i> Régimen de comunicación</li>
                     <li><i class="fas fa-check"></i> Alimentos</li>
-                    <li><i class="fas fa-check"></i> Tenencia</li>
+                    <li><i class="fas fa-check"></i> Plan de parentalidad (Tenencia)</li>
                     <li><i class="fas fa-check"></i> Cuidado personal</li>
+                    <li><i class="fas fa-check"></i> Sucesiones</li>
                 </ul>
             </div>
         </div>
@@ -1383,18 +1370,9 @@
                     </div>
                     <div class="info-content">
                         <strong>WhatsApp</strong>
-                        <a href="https://wa.me/5491135690999" target="_blank">+54 9 11 3569-0999</a>
+                        <a href="https://wa.me/5491139443849" target="_blank">+54 9 11 3944-3849</a>
+                        <a href="https://wa.me/5491150439924" target="_blank">+54 9 11 5043-9924</a>
                         <span>Atención virtual disponible</span>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="info-content">
-                        <strong>Teléfonos</strong>
-                        <a href="tel:1139443849">11 3944-3849</a>
-                        <a href="tel:1150439924">11 5043-9924</a>
                     </div>
                 </div>
                 <div class="info-item">
@@ -1402,8 +1380,8 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="info-content">
-                        <strong>Ubicaciones</strong>
-                        <span><strong>Buenos Aires:</strong> Castelli 581, Of. 6, Cañuelas</span>
+                        <strong>Ubicaciones</strong><br>
+                        <span><strong>Buenos Aires:</strong> Rivadavia 884, Cañuelas</span><br>
                         <span><strong>Córdoba:</strong> Laboulaye</span>
                     </div>
                 </div>
@@ -1443,7 +1421,7 @@
                 </div>
                 <p>Estudio Jurídico Integral Gergel & Acrich. Especialistas en Derecho Previsional y de Familia. Atención virtual y presencial en Buenos Aires y Laboulaye, Córdoba.</p>
                 <div class="social-links">
-                    <a href="https://wa.me/5491135690999" target="_blank" aria-label="WhatsApp" class="social-link">
+                    <a href="https://wa.me/5491139443849" target="_blank" aria-label="WhatsApp" class="social-link">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="tel:1139443849" aria-label="Teléfono" class="social-link">
@@ -1477,7 +1455,7 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5491135690999?text=Hola,%20necesito%20asesoramiento%20legal" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/5491139443849?text=Hola,%20necesito%20asesoramiento%20legal" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1525,7 +1503,7 @@
             const mensaje = document.getElementById('mensaje').value;
             
             const whatsappMessage = `Hola, mi nombre es ${nombre}. ${mensaje}`;
-            const whatsappURL = `https://wa.me/5491135690999?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappURL = `https://wa.me/5491139443849?text=${encodeURIComponent(whatsappMessage)}`;
             
             window.open(whatsappURL, '_blank');
             
