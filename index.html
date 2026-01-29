@@ -185,7 +185,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&q=80') center/cover no-repeat;
+            background: url('./ambos.jpeg') center/cover no-repeat;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            /* Cambia este valor para moverla */
+            background-position: center 30%;
             filter: grayscale(100%) sepia(30%) hue-rotate(280deg); /* Ajustado para tinte lila */
             opacity: 0.2;
             z-index: 0;
@@ -544,11 +548,11 @@
         }
 
         .team-member-icon.female {
-            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80');
+            background-image: url('./maria.png');
         }
 
         .team-member-icon.male {
-            background-image: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&q=80');
+            background-image: url('./horacio.png');
         }
 
         .team-member-icon i {
@@ -1024,6 +1028,13 @@
             .hero-buttons {
                 flex-direction: column;
             }
+            
+            .hero::before {
+                background: url('./ambos.png') center/cover no-repeat;
+                background-size: 220%; 
+                /* Cambia este valor para moverla */
+                background-position: 60% 30%;
+            }
 
             .btn-primary,
             .btn-secondary {
@@ -1381,7 +1392,7 @@
                     </div>
                     <div class="info-content">
                         <strong>Ubicaciones</strong><br>
-                        <span><strong>Buenos Aires:</strong> Rivadavia 884, Cañuelas</span><br>
+                        <span><strong>Cañuelas:</strong> Rivadavia 884</span><br>
                         <span><strong>Córdoba:</strong> Laboulaye</span>
                     </div>
                 </div>
